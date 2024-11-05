@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список Авторів</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css_styles/author_style.css' %}">
+</head>
+<body>
+    {% include 'news/header.html' %}
+    <div class="container">
+        <h2>Список Авторів</h2>
+        <ul class="authors-list">
+            {% for author in authors %}
+            <li class="author-item">
+                <a href="{% url 'author_news' author.id %}" class="author-link">{{ author.first_name }} {{ author.last_name }}</a>
+                <p class="author-bio">{{ author.bio }}</p>
+            </li>
+            {% empty %}
+            <li>Авторів не знайдено.</li>
+            {% endfor %}
+        </ul>
+        <div class="back-link-container">
+            <a class="back-link" href="{% url 'home' %}">Повернутися на Головну</a>
+        </div>
+    </div>
+</body>
+</html>

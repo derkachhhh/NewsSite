@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css_styles/home_style.css' %}">
+</head>
+<body>
+    {% include 'news/header.html' %}
+
+    <div class="container">
+        <h1>Latest News</h1>
+        <ul class="news-list">
+            {% for news in recent_articles %}
+                <li class="news-item">
+                    <h2 class="news-title">
+                        <a href="{% url 'news_detail' news.id %}">{{ news.title }}</a>
+                    </h2>
+                    <p class="news-meta">Author: {{ news.author }} | Date: {{ news.pub_date }}</p>
+                    <p class="news-summary">{{ news.full_text|truncatewords:20 }}</p>
+                </li>
+            {% empty %}
+                <li>No news available to display.</li>
+            {% endfor %}
+        </ul>
+        <div class="click_read-more">
+            <a class="read-more" href="{% url 'news_list' %}">Read more</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css_styles/header_style.css' %}">
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'news_list' %}">News</a></li>
+            <li><a href="{% url 'authors' %}">Authors</a></li>
+        </ul>
+    </nav>
+</header>

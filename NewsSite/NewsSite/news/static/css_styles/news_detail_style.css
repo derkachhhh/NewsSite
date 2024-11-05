@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFCCCB; /* Світло-рожевий фон */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    color: #6a1b9a; /* Темно-фіолетовий колір заголовка */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1em;
+    color: #555; /* Темний колір тексту для абзаців */
+    margin: 10px 0;
+}
+
+a {
+    color: #d5006d; /* Рожевий колір для посилань */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.back-to-news {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #9b59b6; /* Фіолетовий фон для кнопки */
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.back-to-news:hover {
+    background-color: #8e44ad; /* Темніший фіолетовий колір на наведенні */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff; /* Білий фон для контейнера */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

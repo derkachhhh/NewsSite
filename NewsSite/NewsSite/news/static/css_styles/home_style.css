@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFCCCB; /* Світло-рожевий фон */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #6a1b9a; /* Темно-фіолетовий колір для заголовка */
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.news-item {
+    border: 1px solid #e1a3b7; /* Світліший рожевий колір для рамки */
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #fff; /* Білий фон для блоків новин */
+    transition: box-shadow 0.3s;
+}
+
+.news-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.news-title {
+    font-size: 1.5em;
+    color: #d5006d; /* Рожевий колір для заголовків новин */
+}
+
+.news-meta {
+    font-size: 0.9em;
+    color: #7f8c8d; /* Колір для метаданих новин */
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #fff; /* Білий текст для кнопки "Читати далі" */
+    padding: 10px 15px;
+    background-color: #9b59b6; /* Фіолетовий фон для кнопки */
+    border: 1px solid #9b59b6; /* Рамка фіолетового кольору */
+    border-radius: 5px;
+    text-align: center;
+}
+
+.read-more:hover {
+    background-color: rgba(155, 89, 182, 0.7); /* Світліший фіолетовий фон на наведенні */
+    text-decoration: none;
+}
+
+.click_read-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}

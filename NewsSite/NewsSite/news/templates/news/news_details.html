@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ article.title }}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css_styles/news_detail_style.css' %}">
+</head>
+<body>
+    {% include 'news/header.html' %}
+    <div class="container">
+        <h1>{{ article.title }}</h1>
+        <p class="news-meta">Author: {{ article.author.first_name }} {{ article.author.last_name }}</p>
+        <p class="news-meta">Publication Date: {{ article.publication_date }}</p>
+        <p>{{ article.content }}</p>
+        <div class="back-link-container">
+            <a class="back-link" href="{% url 'news_list' %}">Back to News List</a>
+        </div>
+    </div>
+</body>
+</html>
+

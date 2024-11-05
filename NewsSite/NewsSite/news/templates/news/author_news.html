@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>News from {{ selected_author.first_name }} {{ selected_author.last_name }}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css_styles/author_news_style.css' %}">
+</head>
+<body>
+    {% include 'news/header.html' %}
+    <div class="container">
+        <h1>News from {{ selected_author.first_name }} {{ selected_author.last_name }}</h1>
+        <ul class="news-list">
+            {% for news in articles_by_author %}
+                <li class="news-item">
+                    <h2 class="news-title">
+                        <a href="{% url 'news_detail' news.id %}">{{ news.title }}</a>
+                    </h2>
+                    <p class="news-meta">Publication Date: {{ news.publication_date }}</p>
+                    <p>{{ news.full_text|truncatewords:20 }}</p>
+                </li>
+            {% empty %}
+                <li>This author has no news yet.</li>
+            {% endfor %}
+        </ul>
+        <div class="back-link-container">
+            <a class="back-link" href="{% url 'authors' %}">Return to the list of authors</a>
+        </div>
+    </div>
+</body>
+</html>
